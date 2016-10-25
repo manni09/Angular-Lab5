@@ -1,0 +1,24 @@
+<h2>Top Product</h2>
+
+<hr />
+<div class="ui four cards">
+	<div class="card" *ngFor="let product of products" (click)="gotoDetail(product)">
+		<div class="image">
+			<img>
+		</div>
+		<div class="content">
+			<div class="header">
+				{{product.name}}
+			</div>
+			<hr />
+			<div class="content">
+				{{product.description.slice(0, 150)}}
+			</div>
+		</div>
+		<div class="extra content">
+			<div (click)="gotoDetail(product)" class="ui basic blue button"> Detail</div>
+		</div>
+	</div>
+</div>
+<br />
+<br />

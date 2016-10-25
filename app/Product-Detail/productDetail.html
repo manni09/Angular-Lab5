@@ -1,0 +1,33 @@
+<div class="ui form" *ngIf="product">
+	<h2>{{product.name}} Details</h2>
+	<hr />
+	<div>
+		<label hidden>id: {{product.id}} </label>
+	</div>
+
+	<div class="field">
+		<label>Name: </label>
+		<input [(ngModel)]="product.name" placeholder="name">
+	</div>
+
+	<div class="field">
+		<label>Price: </label>
+		<div class="ui labeled input">
+			<div class="ui label">$</div>
+			<input [(ngModel)]="product.price" placeholder="price">
+		</div>
+	</div>
+
+	<div class="field">
+		<label>Category: </label>
+		<input [(ngModel)]="product.category" placeholder="category">
+	</div>
+
+	<div class="field">
+		<label>Description: </label>
+		<textarea [(ngModel)]="product.description" placeholder="description" rows="10" cols="50"> </textarea>
+	</div>
+	<button class="ui button" (click)="goBack()">Back</button>
+	<button class="ui button"  (click)="save()">Save</button>
+</div>
+<br />
